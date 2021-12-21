@@ -23,7 +23,7 @@ $ git clone https://github.com/Liukooo/mssn_project.git
 ```
 
 ## Team
-Project was developed by:
+Project is developed by:
 * Luca Borrelli ![Luca](./img/luca.png)
 * Ilaria Brescia <!--![Ilaria](./img/ila.png)-->
 
