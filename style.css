@@ -2,11 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #A50F00;
+  background: #001F3F;
 }
 
 h1 {
-  color: #A50F00;
+  color: #001F3F;
 }
 
 .box {
@@ -21,7 +21,7 @@ h1 {
 }
 
 .box h1 {
-  color: #A50F00 !important;
+  color: #001F3F !important;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -33,11 +33,11 @@ h1 {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #A50F00 !important;
+  border: 2px solid #001F3F !important;
   padding: 14px 10px;
   width: 200px;
   outline: none;
-  color: #A50F00;
+  color: #001F3F;
   border-radius: 24px;
   transition: 0.25s;
 }
@@ -45,7 +45,7 @@ h1 {
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
   width: 280px;
-  border-color: #A50F00;
+  border-color: #001F3F;
 }
 
 .box input[type="submit"] {
@@ -54,10 +54,10 @@ h1 {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #A50F00;
+  border: 2px solid #001F3F;
   padding: 14px 40px;
   outline: none;
-  color: #A50F00;
+  color: #001F3F;
   border-radius: 24px;
   transition: 0.25s;
   cursor: pointer;

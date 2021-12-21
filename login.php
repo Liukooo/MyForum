@@ -16,8 +16,8 @@
       <input type="password" name="password" placeholder="Password" maxlenght="16" required>
       <div>
          <?php
-            if(isset($_POST['Login'])) {
-               $db = "db";
+            if(isset($_POST['login'])) {
+               $db = "forumdb";
                $username = "root";
                $password = "";
                $servername = "Localhost";
@@ -46,7 +46,7 @@
             }
          ?>
       </div>
-      <a href=""><input type="submit" name="Login" value="Log In"></a>
+      <a href=""><input type="submit" name="login" value="Log In"></a>
    </form>
 </body>
 

@@ -5,19 +5,19 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>SIGNUP My Forum</title>
+   <title>SIGNIN My Forum</title>
    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   <form class="box" action="signup.php" method="post">
-      <h1>Sign Up</h1>
+   <form class="box" action="signin.php" method="post">
+      <h1>Sign In</h1>
       <input type="text" name="username" placeholder="Username" maxlenght="20" required>
       <input type="password" name="password" placeholder="Password" maxlenght="16" required>
       <div>
          <?php
-				if(isset($_POST['signup'])) {
-					$db = "db";
+				if(isset($_POST['signin'])) {
+					$db = "forumdb";
 					$username = "root";
 					$password = "";
 					$servername = "Localhost";
@@ -44,7 +44,7 @@
 				}
 			?>
       </div>
-      <a href=""><input type="submit" name="signup" value="Sign Up"></a>
+      <a href=""><input type="submit" name="signin" value="Sign In"></a>
    </form>
 </body>
 

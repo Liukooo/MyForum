@@ -15,10 +15,58 @@ h1 {
   height: 100%;
 }
 
+.container {}
+
+/*manca il punto*/
+box {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  text-align: center;
+}
+
 p {
   color: #FFFFFF;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
+}
+
+ul#menu {
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  list-style: none;
+  position: fixed;
+  margin-right: 0;
+  margin-top: 10%;
+}
+
+ul#menu li {
+  background-color: #001F3F;
+  border-left: 5px solid #FFFFFF;
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 2px 0;
+}
+
+ul#menu li a {
+  color: #FFFFFF;
+  display: block;
+  font-weight: bold;
+  line-height: 30px;
+  padding-left: 15px;
+  text-decoration: none;
+  width: 135px;
+  /* 150px - 15px (padding) */
+  height: 30px;
+}
+
+ul#menu li:hover {
+  background-color: #173F5F;
+  border-left: 5px solid #001F3F;
 }
 
 #question {
