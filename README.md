@@ -18,17 +18,19 @@ To run this project, install it locally:
 ```
 # Clone this repository
 $ git clone https://github.com/Liukooo/mssn_project.git
+
+# Import the db 
 ```
 
 ## Team
 The team that developed this project is composed by:
-* Luca Borrelli
-* Ilaria Brescia
+* Luca Borrelli ![Luca](./img/luca.png)
+* Ilaria Brescia <!--![Ilaria](./img/ila.png)-->
 
 ## Screenshots
-<!-- ![signup](./images/signup.png)
-![login](./images/login.png)
-![home](./images/home.png) -->
+<!-- ![signup](./img/signup.png)
+![login](./img/login.png)
+![home](./img/home.png) -->
 
 ## Features
 What you can do:
@@ -40,8 +42,7 @@ What you can do:
 
 ## Technologies
 Project is created with:
-* Php version: ...
-* Css version: ...
-* Apache version: ...
-* MySQL version: ...
+* PHP version: 8.0.13
+* CSS version: 3
+* phpMyAdmin SQL version: 5.1.1
 

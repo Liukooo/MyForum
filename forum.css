@@ -1,99 +1,108 @@
-body{
-    background: #173F5F;
+body {
+  background: #173F5F;
+}
 
+h1 {
+  color: #FFFFFF;
+  text-align: center;
 }
-h1{
-    color:#ffffff;
-    text-align: center;
-    
-}
-#gigabox{
-    background:#001f3f;
-    margin-left: 25%;
-    margin-right: 25%; 
-    width:50%;
-    height: 100%;
-}
-box{
-    width: 100%;
-    position:relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: #ffffff;
-    text-align: center;
-}
-p{
-    color: #ffffff;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-}
-#question{
-    border-color: #ffffff;
-    padding: 2%;
-    border-width: 2px;
-    border-style: solid;
-    background: #173F5F;
-    width: 80%;
-    min-height: 25%;
-    margin-left: 10%;
-}
-#questions{
-    width: 98.8%;
-    height: 50%;
-}
-.box input[type = "submit"]{
-    border: 0;
-    background: #001f3f;
-    display: block;
-    text-align: center;
-    border: 2px solid #001f3f;
-    padding: 10px 20px;
-    outline: none;
-    color: #ffffff;
-    border-radius: 14px;
-    transition: 0.25s;
-    cursor: pointer;
-  }
-  .box input[type = "submit"]:hover{
-    background: white;
-    color: #001f3f;
-  }
-  .q{
-    margin:2%;
-    background: #173F5F;
-    border: 2px solid #ffffff;
-    display: block;
-    padding-bottom: 7%;
-  }
-  .user{
-    margin-left: 2%;
-    margin-right: 2%;
-    min-width: 5%;
-    text-align: left;
-    border-bottom: 1px solid #ffffff;
 
-  }
+#gigabox {
+  background: #001F3F;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  height: 100%;
+}
 
-  .txt{
-    margin-left: 4%;
-  }
-  .box input[name = "comment"]{
-    border: 0;
-    background: none;
-    background-color: #001f3f;
-    margin-right: 3%;
-    margin-bottom: 5%;
-    float:right;
-    text-align: center;
-    border: 2px solid #173F5F;
-    outline: none;
-    color: #ffffff;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-  }
-  .box input[name = "comment"]:hover{
-    background: white;
-    color: #001f3f
-  }
+.box {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  text-align: center;
+}
+
+p {
+  color: #FFFFFF;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+#question {
+  border-color: #FFFFFF;
+  padding: 2%;
+  border-width: 2px;
+  border-style: solid;
+  background: #173F5F;
+  width: 80%;
+  min-height: 25%;
+  margin-left: 10%;
+}
+
+#questions {
+  width: 98.8%;
+  height: 50%;
+}
+
+.box input[type="submit"] {
+  border: 0;
+  background: #001F3F;
+  display: block;
+  text-align: center;
+  border: 2px solid #001F3F;
+  padding: 10px 20px;
+  outline: none;
+  color: #FFFFFF;
+  border-radius: 14px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+  background: #FFFFFF;
+  color: #001F3F;
+}
+
+.q {
+  margin: 2%;
+  background: #173F5F;
+  border: 2px solid #FFFFFF;
+  display: block;
+  padding-bottom: 7%;
+}
+
+.user {
+  margin-left: 2%;
+  margin-right: 2%;
+  min-width: 5%;
+  text-align: left;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.txt {
+  margin-left: 4%;
+}
+
+.box input[name="comment"] {
+  border: 0;
+  background: none;
+  background-color: #001F3F;
+  margin-right: 3%;
+  margin-bottom: 5%;
+  float: right;
+  text-align: center;
+  border: 2px solid #173F5F;
+  outline: none;
+  color: #FFFFFF;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[name="comment"]:hover {
+  background: #FFFFFF;
+  color: #001F3F
+}
