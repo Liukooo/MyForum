@@ -44,7 +44,7 @@
 				}
 			?>
       </div>
-      <a href=""><input type="submit" name="signup" value="signup"></a>
+      <a href=""><input type="submit" name="signup" value="Sign Up"></a>
    </form>
 </body>
 

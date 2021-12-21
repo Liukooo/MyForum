@@ -46,7 +46,7 @@
             }
          ?>
       </div>
-      <a href=""><input type="submit" name="Login" value="Login"></a>
+      <a href=""><input type="submit" name="Login" value="Log In"></a>
    </form>
 </body>
 

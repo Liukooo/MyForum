@@ -6,7 +6,7 @@
     $servername = "Localhost";
     $conn = new mysqli ($servername, $username, $password, $db);
     if( !isset($_SESSION['username']) )
-        die( "<script>location.href='login_quarantena.php'</script>" );
+        die( "<script>location.href='login.php'</script>" );
 ?>
 
 <!DOCTYPE html>
