@@ -1,10 +1,9 @@
-# Forum - Management of System Security and Networks project
+# myForum - Management of System Security and Networks project
 
 ## Table of contents
 * [Introduction](#introduction)
 * [Instructions](#instructions)
 * [Team](#team)
-* [Screenshots](#screenshots)
 * [Features](#features)
 * [Technologies](#technologies)
 
@@ -35,12 +34,6 @@ Project is developed by:
 <a><img alt="Luca" title="Luca Borrelli" src="./img/luca.jpg" width="200"></a> | <a><img alt="Ilaria" title="Ilaria Brescia" src="./img/ila.jpg" width="200"></a>
 ---|---
 Luca Borrelli | Ilaria Brescia
-
-## Screenshots
-<!-- ![signup](./img/signup.png)
-![login](./img/login.png)
-![home](./img/forum.png) 
-![answers](./img/answers.png)-->
 
 ## Features
 What you can do:
