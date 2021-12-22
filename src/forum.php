@@ -27,7 +27,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>My Forum</title>
    <link rel="stylesheet" href="forum.css?v=<?php echo time(); ?>">
-   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="/workspace/myForum/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
