@@ -24,8 +24,9 @@ $ git clone https://github.com/Liukooo/mssn_project.git
 
 ## Team
 Project is developed by:
-* Luca Borrelli ![Luca](./img/luca.png)
-* Ilaria Brescia <!--![Ilaria](./img/ila.png)-->
+![Luca](./img/luca.jpg)  | ![Ilaria](./img/ila.jpg)
+---|---
+Luca Borrelli | Ilaria Brescia
 
 ## Screenshots
 <!-- ![signup](./img/signup.png)
