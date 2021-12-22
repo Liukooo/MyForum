@@ -15,19 +15,6 @@ h1 {
   height: 100%;
 }
 
-.container {}
-
-/*manca il punto*/
-box {
-  width: 100%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffff;
-  text-align: center;
-}
-
 p {
   color: #FFFFFF;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -70,19 +57,26 @@ ul#menu li:hover {
 }
 
 #question {
-  border-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
   padding: 2%;
-  border-width: 2px;
-  border-style: solid;
   background: #173F5F;
   width: 80%;
   min-height: 25%;
   margin-left: 10%;
 }
 
+#q {
+  border: 2px solid #FFFFFF;
+  padding: 2%;
+  background: #173F5F;
+  margin: 2%;
+  display: block;
+  padding-bottom: 7%;
+}
+
 #questions {
   width: 98.8%;
-  height: 50%;
+  height: 10%;
 }
 
 .box input[type="submit"] {
@@ -104,14 +98,6 @@ ul#menu li:hover {
   color: #001F3F;
 }
 
-.q {
-  margin: 2%;
-  background: #173F5F;
-  border: 2px solid #FFFFFF;
-  display: block;
-  padding-bottom: 7%;
-}
-
 .user {
   margin-left: 2%;
   margin-right: 2%;
@@ -124,7 +110,7 @@ ul#menu li:hover {
   margin-left: 4%;
 }
 
-.box input[name="comment"] {
+.box input[name="answer"] {
   border: 0;
   background: none;
   background-color: #001F3F;
@@ -140,7 +126,7 @@ ul#menu li:hover {
   cursor: pointer;
 }
 
-.box input[name="comment"]:hover {
+.box input[name="answer"]:hover {
   background: #FFFFFF;
   color: #001F3F
 }

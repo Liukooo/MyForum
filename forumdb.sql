@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2021 at 04:48 PM
+-- Generation Time: Dec 22, 2021 at 06:41 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db`
+-- Database: `forumdb`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,14 @@ CREATE TABLE `answers` (
 
 INSERT INTO `answers` (`id`, `username`, `text`, `id_questions`) VALUES
 (1, 'a', 'ue fra', 34),
-(2, 'ilaria', ' ueue', 34);
+(2, 'ilaria', ' ueue', 34),
+(3, 'Liuk', ' aar', 39),
+(4, 'Liuk', ' bohh', 38),
+(5, 'Liuk', ' boh', 39),
+(6, 'Liuk', ' dhf', 39),
+(7, 'Liuk', 'csc', 39),
+(8, 'Liuk', 'helooooo', 40),
+(9, 'ilaria', 'fe', 41);
 
 -- --------------------------------------------------------
 
@@ -59,9 +66,12 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`username`, `id`, `text`) VALUES
-('ilaria', 34, ' ehi ciao \r\n'),
 ('a', 36, ' ou'),
-('Liuk', 37, ' bob');
+('Liuk', 37, ' bob'),
+('Boh', 38, ' boh'),
+('', 39, ' ggr'),
+('Liuk', 40, ' hhh'),
+('ilaria', 42, 'gr');
 
 -- --------------------------------------------------------
 
@@ -79,9 +89,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `password`) VALUES
-('a', 'a'),
 ('ilaria', 'bb'),
-('Liuk', 'ggg');
+('Liuk', 'ggg'),
+('Luca', 'Qwerty12.');
 
 --
 -- Indexes for dumped tables
@@ -115,13 +125,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- Constraints for dumped tables

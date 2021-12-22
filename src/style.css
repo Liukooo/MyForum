@@ -5,10 +5,6 @@ body {
   background: #001F3F;
 }
 
-h1 {
-  color: #001F3F;
-}
-
 .box {
   width: 300px;
   padding: 40px;
@@ -21,7 +17,7 @@ h1 {
 }
 
 .box h1 {
-  color: #001F3F !important;
+  color: #001F3F;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -33,7 +29,7 @@ h1 {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #001F3F !important;
+  border: 2px solid #001F3F;
   padding: 14px 10px;
   width: 200px;
   outline: none;
@@ -64,5 +60,6 @@ h1 {
 }
 
 .box input[type="submit"]:hover {
-  background: #FFFFFF;
+  color: #FFFFFF;
+  background: #001F3F;
 }

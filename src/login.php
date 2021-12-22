@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LOGIN My Forum</title>
+   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,18 +36,19 @@
                $querypass = $conn->query("SELECT password FROM user WHERE (password = '$password')");
 
                if ($queryuser->num_rows==1 && $querypass->num_rows==1) {
+                  $_SESSION['last_activity'] = time(); // you have to add this line when logged in also;
                   echo "<script>location.href='forum.php'</script>";
                }
                else if ($queryuser->num_rows==1 && $querypass->num_rows==0) {
                   echo "Password errata!";
                }
                else {
-                  echo "Mail e/o password errata!";
+                  echo "User e/o password errata!";
                }
             }
          ?>
       </div>
-      <a href=""><input type="submit" name="login" value="Log In"></a>
+      <input type="submit" name="login" value="Log In">
    </form>
 </body>
 

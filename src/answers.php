@@ -1,28 +1,37 @@
 <?php
-  session_start();
-  $db = "forumdb";
-  $username = "root";
-  $password = "";
-  $servername = "Localhost";
-  $conn = new mysqli ($servername, $username, $password, $db);
+   session_start();
+   $expire_time = 5*60; //expire time
+   if( $_SESSION['last_activity'] < time()-$expire_time ) {
+      echo "<script>location.href='logout.php'</script>";
+      die();
+   } else {
+      $_SESSION['last_activity'] = time(); // you have to add this line when logged in also;
+      echo 'You are uptodate';
+   }
+   $db = "forumdb";
+   $username = "root";
+   $password = "";
+   $servername = "Localhost";
+   $conn = new mysqli ($servername, $username, $password, $db);
 ?>
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title> My Forum </title>
+   <title>My Forum</title>
    <link rel="stylesheet" href="forum.css?v=<?php echo time(); ?>">
+   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
    <div class="container">
       <ul id="menu">
          <li>
-            <a href="">
+            <a>
                <?php 
                   $user=$_SESSION['username'];
                   if(($user=='')||(!isset($user))) {
@@ -32,7 +41,7 @@
 
                      if ($queryuser->num_rows > 0) {
                         while($row = $queryuser->fetch_assoc()) {
-                           echo "Ciao " . $row["username"] . "";
+                           echo "Hi " . $row["username"] . "";
                         }
                      }
                   }
@@ -47,7 +56,7 @@
          <div id="gigabox">
             <h1>Forum</h1>
             <div id="question">
-               <p> Question by
+               <p>Question by
                   <?php 
                     $val = $conn->query("SELECT username FROM questions WHERE id = " . $_GET['id']);
                     $row = mysqli_fetch_row($val);
@@ -83,16 +92,16 @@
                ?>
             </div>
       </form>
-      <div class='q'>
-         <textarea id="questions" name="questions" placeholder="Write and submit a comment"></textarea>
-         <a href=""><input type="submit" name="submit" value="Submit"></a>
+      <div id='q'>
+         <textarea id="questions" name="questions" placeholder="Write and submit an answer"></textarea>
+         <a><input type="submit" name="submit" value="Submit"></a>
       </div>
       <?php
          $result = $conn->query("SELECT * FROM answers WHERE id_questions=" . $_GET['id']);
                
          while($row = mysqli_fetch_array($result)) {
             //$url = "answers.php?id=" . $row['id'];
-            echo "<div class='q'><p class='user'>" . $row['username'] . "</p><p class='txt'>" . $row['text'] . "</p></div>";
+            echo "<div id='q'><p class='user'>" . $row['username'] . "</p><p class='txt'>" . $row['text'] . "</p></div>";
          }
       ?>
    </div>
