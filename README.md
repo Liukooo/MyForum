@@ -23,7 +23,7 @@ $ git clone https://github.com/Liukooo/mssn_project.git
 $ http://localhost/phpmyadmin/index.php?route=/server/databases&server=1
 
 # Start the Apache server and run the application in the localhost
-$ http://localhost/mssn/signin.php
+$ http://localhost/mssn_project/signin.php
 
 # Sign in with a username and a password and after the success log in with the same username and password
 
