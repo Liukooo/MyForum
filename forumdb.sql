@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 23, 2021 at 02:46 PM
+-- Generation Time: Dec 23, 2021 at 10:56 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -58,7 +58,8 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`username`, `id`, `text`) VALUES
-('Luca', 46, 'Is it a test?');
+('Luca', 46, 'Is it a test?'),
+('Luca', 48, 'Mare o montagna?');
 
 -- --------------------------------------------------------
 
@@ -111,13 +112,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- Constraints for dumped tables
