@@ -9,7 +9,6 @@
       die();
    } else {
       $_SESSION['last_activity'] = time();
-      echo 'You are uptodate';
    }
    $db = "forumdb";
    $username = "root";

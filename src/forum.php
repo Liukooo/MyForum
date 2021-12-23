@@ -9,15 +9,12 @@
         die();
     } else {
         $_SESSION['last_activity'] = time();
-        echo 'You are uptodate';
     }
     $db = "forumdb";
     $username = "root";
     $password = "";
     $servername = "Localhost";
     $conn = new mysqli ($servername, $username, $password, $db);
-    //if( !isset($_SESSION['username']) )
-    //    die( "<script>location.href='login.php'</script>" );
 ?>
 
 <head>
@@ -68,12 +65,12 @@
                   if(!strlen(trim($_POST['inputquestion']))) {
                         echo "Please enter a question";
                   } else {
-                        if($conn->query($sql) === TRUE) {
-                           echo "New record created successfully";
-                           echo "<meta http-equiv='refresh' content='0'>";
-                        } else {
-                           echo "Error: " . $sql . "<br>" . $conn->error;
-                        }
+                     if($conn->query($sql) === TRUE) {
+                        echo "New record created successfully";
+                        echo "<meta http-equiv='refresh' content='0'>";
+                     } else {
+                        echo "Error: " . $sql . "<br>" . $conn->error;
+                     }
                   }
                }
             ?>
@@ -83,10 +80,10 @@
          <?php
             $result = $conn->query("SELECT * FROM questions ORDER BY id DESC");
 
-            while($row = mysqli_fetch_array($result)){
-                  $url = "answers.php?id=" . $row['id'];
-                  echo "<div class='displayinput'><p id='user'>" . $row['username'] . "</p><p id='txt'>" . $row['text'] . "</p>";
-                  echo "<form action=" . $url . " method=post><input type='submit' id='submit' name='addanswer' value='Add answer'></form></div>";
+            while($row = mysqli_fetch_array($result)) {
+               $url = "answers.php?id=" . $row['id'];
+               echo "<div class='displayinput'><p id='user'>" . $row['username'] . "</p><p id='txt'>" . $row['text'] . "</p>";
+               echo "<form action=" . $url . " method=post><input type='submit' id='submit' name='addanswer' value='Add answer'></form></div>";
             }
          ?>
       </div>
