@@ -21,16 +21,16 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My Forum</title>
+   <title>myForum</title>
    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
-   <link rel="icon" href="/workspace/myForum/img/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="lightback">
    <nav class="menu">
       <ul>
          <li><a>
-               <?php 
+            <?php
                $user = $_SESSION['username'];
                if(($user=='')||(!isset($user))) {
                   echo "<a href='login.php'>Log in</a>";
