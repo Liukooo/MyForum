@@ -3,13 +3,6 @@
 
 <?php
    session_start();
-   $expire_time = 5*60;
-   if( $_SESSION['last_activity'] < time()-$expire_time ) {
-      echo "<script>location.href='logout.php'</script>";
-      die();
-   } else {
-      $_SESSION['last_activity'] = time();
-   }
    $db = "forumdb";
    $username = "root";
    $password = "";
@@ -77,15 +70,9 @@
             <?php
                if(isset($_POST['submit'])) {
                   $user = $_SESSION['username'];
-                  $user = addslashes ($user);
-                  mysqli_real_escape_string($conn,$user);
                   $id = $_GET['id'];
-                  $id = addslashes ($id);
                   $text = $_POST['inputquestion'];
-                  $text = addslashes ($text);
-                  mysqli_real_escape_string($conn,$text);
-                  $sanitizedText = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
-                  $sql = "INSERT INTO answers (username, text, id_questions) VALUES ('$user','$sanitizedText', '$id')";
+                  $sql = "INSERT INTO answers (username, text, id_questions) VALUES ('$user','$text', '$id')";
 
                   if($conn->query($sql) === TRUE) {
                      echo "New record created successfully";
@@ -102,7 +89,7 @@
             $result = $conn->query("SELECT * FROM answers WHERE id_questions=" . $_GET['id']);
 
             while($row = mysqli_fetch_array($result)) {
-               echo "<div class='displayinput'><p id='user'>" . $row['username'] . "</p><p id='txt'>" . htmlspecialchars($row['text'], ENT_QUOTES, 'UTF-8') . "</p></div>";
+               echo "<div class='displayinput'><p id='user'>" . $row['username'] . "</p><p id='txt'>" . $row['text'] . "</p></div>";
             }
          ?>
       </div>

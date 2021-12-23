@@ -3,13 +3,6 @@
 
 <?php
     session_start();
-    $expire_time = 5*60;
-    if($_SESSION['last_activity'] < time()-$expire_time ) {
-        echo "<script>location.href='logout.php'</script>";
-        die();
-    } else {
-        $_SESSION['last_activity'] = time();
-    }
     $db = "forumdb";
     $username = "root";
     $password = "";
@@ -61,8 +54,7 @@
                   $text = $_POST['inputquestion'];
                   $text = addslashes ($text);
                   mysqli_real_escape_string($conn,$text);
-                  $sanitizedText = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
-                  $sql = "INSERT INTO questions (username, text) VALUES ('$user','$sanitizedText')";
+                  $sql = "INSERT INTO questions (username, text) VALUES ('$user','$text')";
                   if(!strlen(trim($_POST['inputquestion']))) {
                         echo "Please enter a question";
                   } else {
@@ -83,7 +75,7 @@
 
             while($row = mysqli_fetch_array($result)) {
                $url = "answers.php?id=" . $row['id'];
-               echo "<div class='displayinput'><p id='user'>" . $row['username'] . "</p><p id='txt'>" . htmlspecialchars($row['text'], ENT_QUOTES, 'UTF-8') . "</p>";
+               echo "<div class='displayinput'><p id='user'>" . $row['username'] . "</p><p id='txt'>" . $row['text'] . "</p>";
                echo "<form action=" . $url . " method=post><input type='submit' id='submit' name='addanswer' value='Add answer'></form></div>";
             }
          ?>
