@@ -26,12 +26,16 @@ $ http://localhost/phpmyadmin/index.php?route=/server/databases&server=1
 ## Instructions
 To run this project, follow the instructions:
 ```
-# Start the Apache server and run the application in the localhost
-$ http://localhost/mssn_project/signin.php
+# Start Apache server and MySQL database
 
-# Sign in with a username and a password and after the success log in with the same username and password
+# Run the application in the localhost, sign in with a username and a password and after success, log in with the same username and password
+$ http://localhost/mssn_project/src-secure/signin.php
 
-# 
+# Now you have various options: ask a question in the main forum, answer to a specific question, sign in with a new account or log out
+$ http://localhost/mssn_project/src-secure/forum.php
+
+# If you want to answer a specific question you will be redirected to the specific page where you can answer the question or consult other answers from other users
+$ http://localhost/mssn_project/src-secure/answers.php?id=46
 ```
 
 ## Team
