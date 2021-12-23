@@ -27,7 +27,7 @@
 					$password = $_POST ['password'];
 					$usercheck = $conn -> query("SELECT username FROM user WHERE (username = '$user')");
 
-					if($usercheck -> num_rows == 0) {
+					if(!empty($usercheck) && $usercheck->num_rows > 0) {
 						$add = "INSERT INTO user (username, password) VALUES ('$user', '$password')";
 						if($conn->query($add = "INSERT INTO user (username, password) VALUES ('$user', '$password')") === TRUE) {
 							echo "Your registration has been succesfull! <a href = login.php><br>LOGIN</a> to continue";

@@ -65,7 +65,7 @@
                <?php
                   $val = $conn->query("SELECT text FROM questions WHERE id = " . $_GET['id']);
                   $row = mysqli_fetch_row($val);
-                  echo $row[0];
+                  echo htmlspecialchars($row[0], ENT_QUOTES, 'UTF-8');
                ?>
             </p>
          </div>

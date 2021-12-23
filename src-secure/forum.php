@@ -67,8 +67,7 @@
                         echo "Please enter a question";
                   } else {
                      if($conn->query($sql) === TRUE) {
-                        echo "New record created successfully";
-                        echo "<meta http-equiv='refresh' content='0'>";
+                        echo "<script>alert('New record created successfully')</script>";
                      } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                      }
