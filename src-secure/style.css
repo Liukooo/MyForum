@@ -28,7 +28,7 @@ form.formbox {
   font-weight: 500;
 }
 
-.formbox input#elements {
+.formbox input {
   border: 0;
   background: none;
   display: block;
@@ -43,7 +43,7 @@ form.formbox {
   transition: 0.25s;
 }
 
-.formbox input#elements:focus {
+.formbox input:focus {
   width: 280px;
 }
 

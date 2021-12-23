@@ -13,8 +13,8 @@
 <body class="darkback">
    <form class="formbox" action="login.php" method="post">
       <h1>Login</h1>
-      <input type="text" id="elements" name="username" placeholder="Enter your username" maxlenght="250" required>
-      <input type="password" id="elements" name="password" placeholder="Enter your password" maxlenght="16" required>
+      <input type="text" name="username" placeholder="Enter your username" maxlenght="250" required>
+      <input type="password" name="password" placeholder="Enter your password" maxlenght="16" required>
       <div>
          <?php
             if(isset($_POST['login'])) {

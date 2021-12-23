@@ -13,8 +13,8 @@
 <body class="darkback">
    <form class="formbox" action="signin.php" method="post">
       <h1>Sign In</h1>
-      <input type="text" id="elements" name="username" placeholder="Create your username" maxlenght="20" required>
-      <input type="password" id="elements" name="password" placeholder="Create your password" maxlenght="16" required>
+      <input type="text" name="username" placeholder="Create your username" maxlenght="20" required>
+      <input type="password" name="password" placeholder="Create your password" maxlenght="16" required>
       <div>
          <?php
 				if(isset($_POST['signin'])) {
@@ -25,17 +25,11 @@
 					$conn = new mysqli ($servername, $username, $password, $db);
 					$user = $_POST ['username'];
 					$password = $_POST ['password'];
-					$usercheck = $conn -> query("SELECT username FROM user WHERE (username = '$user')");
-
-					if(!empty($usercheck) && $usercheck->num_rows > 0) {
-						$add = "INSERT INTO user (username, password) VALUES ('$user', '$password')";
-						if($conn->query($add = "INSERT INTO user (username, password) VALUES ('$user', '$password')") === TRUE) {
-							echo "Your registration has been succesfull! <a href = login.php><br>LOGIN</a> to continue";
-						} else {
-							echo "Try again in a few minutes";
-						}
+					$add = "INSERT INTO user (username, password) VALUES ('$user', '$password')";
+					if($conn->query($add = "INSERT INTO user (username, password) VALUES ('$user', '$password')") === TRUE) {
+						echo "Your registration has been succesfull! <a href = login.php><br>LOGIN</a> to continue";
 					} else {
-						echo "This username is already in use, go to <a href = login.php><br>LOGIN</a>";
+						echo "Try again in a few minutes";
 					}
 				}
 			?>
