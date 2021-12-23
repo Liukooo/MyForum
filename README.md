@@ -2,25 +2,30 @@
 
 ## Table of contents
 * [Introduction](#introduction)
+* [Setup](#setup)
 * [Instructions](#instructions)
 * [Team](#team)
 * [Features](#features)
 * [Technologies](#technologies)
 
 ## Introduction
-The objective of this project is to develop 2 similar web app to test our knowledge in cyber security. 
-Implementing an exploitable web app (with database) that can be subjected to XSS, CSRF and SQL injection attacks.
-Implementing the same web app as before but this time secure.
+This project aims to develop a web application to test our knowledge in the field of cyber security. There are 2 versions of the same application.
+The first version implements an unsecured web app (with database) that can be subjected to XSS, CSRF, and SQL injection attacks.
+Instead, the second version implements the same web app as before, but it is secure.
+
+## Setup
+To install this project, follow the instructions:
+```
+# Clone this repository in the local xammp/htdocs repository
+$ git clone https://github.com/Liukooo/mssn_project.git
+
+# Import the database file forumdb.sql on the local PhpMyAdmin named forumdb
+$ http://localhost/phpmyadmin/index.php?route=/server/databases&server=1
+```
 
 ## Instructions
 To run this project, follow the instructions:
 ```
-# Clone this repository in the local htdocs repository
-$ git clone https://github.com/Liukooo/mssn_project.git
-
-# Import the database file forumdb.sql on the local PhpMyAdmin with the name forumdb
-$ http://localhost/phpmyadmin/index.php?route=/server/databases&server=1
-
 # Start the Apache server and run the application in the localhost
 $ http://localhost/mssn_project/signin.php
 
